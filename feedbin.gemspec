@@ -1,12 +1,9 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'feedbin/version'
+require_relative 'lib/feedbin/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "feedbin"
   spec.version       = Feedbin::VERSION
-  spec.author        = "Colby Aley"
+  spec.authors        = ["Colby Aley", "Agusti B.R."]
   spec.email         = "colby@aley.me"
   spec.description   = %q{A Ruby wrapper for the Feedbin API}
   spec.summary       = %q{Ruby wrapper for the Feedbin API}
@@ -20,8 +17,8 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "httparty"
 
-  spec.add_development_dependency "bundler", "~> 1.3"
+  spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake"
-  spec.add_development_dependency "rspec", ">= 2.14"
-  spec.add_development_dependency "webmock"
+  spec.add_development_dependency "rspec", "~>  3.0"
+  spec.add_development_dependency "webmock", "~> 3.0"
 end
